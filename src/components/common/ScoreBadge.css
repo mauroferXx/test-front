@@ -1,0 +1,50 @@
+.score-badge-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.score-badge-container.small {
+    font-size: 0.85em;
+}
+
+.score-badge-container.medium {
+    font-size: 1em;
+}
+
+.score-badge-container.large {
+    font-size: 1.15em;
+}
+
+.score-badge-total {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 1rem;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.score-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.85em;
+}
+
+.score-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.score-label {
+    color: var(--text-secondary, #666);
+    font-weight: 500;
+}
+
+.score-value {
+    font-weight: 600;
+    color: var(--text-primary, #333);
+}

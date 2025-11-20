@@ -1,0 +1,268 @@
+/* Modal de Sustitutos */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 1rem;
+    max-width: 1200px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.close-modal:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.loading-message,
+.no-results {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.comparison-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 968px) {
+    .comparison-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.original-product-card {
+    background: #f8f9fa;
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+
+.original-product-card h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #666;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.substitutes-section h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #4caf50;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.substitutes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.substitute-item {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    transition: all 0.2s;
+}
+
+.substitute-item:hover {
+    border-color: #4caf50;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.1);
+}
+
+.substitute-item.original {
+    border-color: #ffc107;
+}
+
+.sub-main-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sub-product-details {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+}
+
+.sub-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    background: #f5f5f5;
+    flex-shrink: 0;
+}
+
+.sub-info {
+    flex: 1;
+}
+
+.sub-info h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.sub-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.substitute-price {
+    font-size: 1.2rem;
+    color: #4caf50;
+}
+
+.improvement-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    color: white;
+    padding: 0.35rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.replace-btn {
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.replace-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.score-breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+}
+
+.score-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.score-label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.score-value {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Badge de recomendación */
+.recommendation-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.recommendation-economic {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #90caf9;
+}
+
+.recommendation-environmental {
+    background-color: #e8f5e9;
+    color: #388e3c;
+    border: 1px solid #a5d6a7;
+}
+
+.recommendation-social {
+    background-color: #fff3e0;
+    color: #f57c00;
+    border: 1px solid #ffb74d;
+}
+
+.recommendation-balanced {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+    border: 1px solid #ce93d8;
+}
